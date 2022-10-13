@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"it_training.tb_option"}],"uuid":"d32ba734c3704b2797603f9c333af384"}

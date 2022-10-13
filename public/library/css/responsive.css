@@ -1,0 +1,892 @@
+@media screen and (max-width: 1919px){
+	figure.canada {
+	    top: 43%;
+	    left: 24%;
+	}
+	figure.australia {
+	    bottom: 0;
+	    right: 25%;
+	}
+	figure.india {
+	    right: 35%;
+	}
+}
+
+/*1680*/
+@media screen and (max-width: 1679px){
+	.achvmnt-inr .section-title {
+	    padding: 0 20% 0 0;
+	}
+	figure.canada img, figure.australia img {
+	    height: 90px;
+	    width: 90px;
+	}
+	figure.canada {
+	    top: 42%;
+	    left: 21%;
+	}
+	figure.india {
+	    right: 33.5%;
+        top: 61%;	
+	}
+	figure.australia {
+	    bottom: 1%;
+	    right: 23%;
+	}
+	.center-wr {
+	    width: 90% !important;
+	}
+}
+/*1440*/
+
+@media screen and (max-width: 1439px){
+	figure.australia {
+	    bottom: 1%;
+	    right: 21%;
+	}
+	figure.india {
+	    right: 31.7%;
+	    top: 60.2%;
+	}
+	figure.canada {
+	    top: 39%;
+	    left: 19%;
+	}
+	.center-wr {
+	    width: 1200px !important;
+	}
+	.banner-inr .left{
+		width: 47%;
+	}
+	.banner-inr .right{
+		width: 53%;
+	}
+	.banner-inr .left h1 {
+	    font-size: 60px;
+	    line-height: 75px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 84px;
+	    line-height: 96px;
+	}
+	figure.india {
+	    right: 32.1%;
+	    top: 60.5%;
+	}
+	.australia figcaption {
+	    top: -20%;
+	    left: 90%;
+	}
+	.banner-inr .left p br {
+		display: none;
+	}
+	.banner-inr .left p{
+		padding: 0 70px 0 0;
+	}
+	.easy-wrp:before {
+		height: 980px;
+	}
+
+
+
+}
+/*1366*/
+
+@media screen and (max-width: 1199px){
+	.center-wr {
+	    width: 96% !important;
+	}
+	.banner-inr .left h1 {
+	    font-size: 58px;
+	    line-height: 70px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 80px;
+	    line-height: 88px;
+	}
+	.banner-inr .right {
+	    width: 51%;
+	}
+	.banner-wrp {
+	    position: relative;
+	    padding: 170px 0 80px;
+	}
+	.service-inr h3{
+		font-size: 40px;
+		line-height: 60px;
+	}
+	.indvdl-service{
+		margin-left: 2.1%;
+	}
+	
+	.indvdl-service h4 {
+	    font-size: 24px;
+	    line-height: 31px;
+	    margin: 31px 0 18px;
+	}
+	.servc-icon svg {
+		height: 110px;
+		width: 110px;
+	}
+	.indvdl-service .servc-icon:before, .indvdl-service .servc-icon:before {
+		height: 65%;
+		width: 65%;
+	}
+	.service-wrp:before{
+		height: 850px;
+	}
+	.achvmnt-inr .left, .achvmnt-inr .right {
+	    width: 100%;
+	}
+	.achvmnt-inr .right{
+		position: unset;
+		transform: translateY(0);
+	}
+	.achvmnt-wrp{
+		padding: 0;
+	}
+	.service-wrp {
+	    padding: 60px 0 270px;
+	}
+	.bestwrks{
+		margin-left: 3%;
+	}
+	.bestwrks h4 {
+	    font-size: 27px;
+	    line-height: 37px;
+	}
+	.easy-wrp:before {
+	    height: 800px;
+	}
+	.easy-inr .section-title {
+	    margin-top: 180px;
+	}
+	.review-inr .section-title {
+	    padding: 0 10% 0 0;
+	}
+	.section-title {
+	    font-size: 38px;
+	    line-height: 54px;
+	}
+	.feild50{
+		margin-left: 14.3px !important;
+	}
+	.conact-wrp .left {
+		left: -21px;
+	}
+	figure.canada {
+	    top: 38%;
+	    left: 12%;
+	}
+	figure.india {
+	    right: 28.1%;
+	    top: 59.5%;
+	}
+	figure.australia {
+	    bottom: 1%;
+	    right: 16%;
+	}
+	.australia figcaption {
+	    top: -20%;
+	    left: -360%;
+	}
+	.connect-row {
+	    width: 93%;
+	}
+	.footer-contact {
+		width: 96%;
+		padding: 30px 30px 30px 36px;
+	}
+	.footer-bottom {
+	    padding: 40px 0 30px;
+	}
+}
+/*1024*/
+
+@media screen and (max-width: 1023px){
+	.fixed{
+		display: none;
+	}
+	a.lets-talk{
+		display: inline-block;
+	}
+	.slicknav_nav a{
+		padding: 8px 18px !important;
+		font-weight: 500 !important;
+		font-size: 16px !important;
+		transition: 0.5s;
+	}
+	.site-menu{
+		width: 60%;
+	}
+	.slicknav_nav a.lets-talk:hover{
+		background: #fff !important;
+		color: #233D63 !important;
+		display: inline-block;
+
+	}
+	ul.menu-list{
+		display: none;
+	}
+	.slicknav_menu{
+		display: block;
+	}
+	/*header*/
+	.banner-inr .left h1 {
+	    font-size: 55px;
+	    line-height: 60px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 73px;
+	    line-height: 80px;
+	}
+	.banner-inr .right {
+	    width: 52%;
+	}
+	.indvdl-service {
+		padding: 26px 15px;
+	}
+	.client-name {
+	    margin-left: 12px;
+	}
+	.conact-wrp .right {
+	    width: 52%;
+	}
+	figure.india {
+	    right: 27.1%;
+	    top: 59.5%;
+	}
+	figure.australia {
+	    bottom: 1%;
+	    right: 14%;
+	}
+	figcaption {
+		width: 311px;
+		padding: 15px 20px;
+	}
+	.connect-box{
+		margin-left: 5.9%;
+	}
+	.contact-detl-box {
+		width: 55%;
+		margin-left: 28px;
+		vertical-align: top;
+		text-align: left;
+	}
+	.contact-detl-box:first-child {
+	    width: 41%;
+	}
+	.contact-detl-box:nth-child(3){
+		margin-left: 0;
+		margin-top: 20px;
+		width: 40%;
+	}
+	.footer-contact{
+		text-align: center;
+		position: unset;
+		border-radius: 10px;
+	}
+	.footer-middle{
+		padding: 40px 0 70px;
+		margin-bottom: 0;
+	}
+
+
+}
+/*980*/
+
+@media screen and (max-width: 979px){
+	
+	.banner-inr .left,.banner-inr .right{
+		width: 100%;
+		float: none;
+	}
+	
+	.banner-inr .left{
+		position: unset;
+		transform: translateY(0);
+		margin-bottom: 60px;
+	}
+	.banner-inr .right svg{
+		margin: 0 auto;
+	}
+	.banner-wrp {
+	    position: relative;
+	    padding: 180px 0 40px;
+	}
+	.indvdl-service{
+		width: 43%;
+		margin: 20px 10px !important;
+	}
+	.service-row{
+		text-align: center;
+	}
+	.servc-icon{
+		margin: 0 auto;
+	}
+	.service-inr h3 {
+	    font-size: 38px;
+	    line-height: 43px;
+	}
+	.service-wrp {
+	    padding: 70px 0 180px;
+	}
+	.section-title {
+	    font-size: 35px;
+	    line-height: 47px;
+	}
+	.best-wrk-row{
+		text-align: center;
+	}
+	.bestwrks {
+	    width: 44%;
+	    margin: 0 2.5% 8% 2.5%!important;
+	    text-align: left;
+	}
+	.bestwrks h4 {
+	    font-size: 24px;
+	    line-height: 30px;
+	}
+	.bestwrks span {
+	    font-size: 16px;
+	    line-height: 24px;
+	}
+	.apps-wrp-left, .apps-wrp-left figure,.apps-wrp-left img,.apps-wrp-right,.apps-wrp-right figure, .apps-wrp-right img{
+		position: unset;
+	}
+	.apps-wrp-left img,.apps-wrp-left figure,.apps-wrp-right img,.apps-wrp-right figure{
+		display: inline-block;
+		margin: 20px ;
+	}
+	.easy-inr .section-title {
+	   margin: 20px 0;
+	}
+	.easy-wrp{
+		padding: 20px 0 70px;
+	}
+	.review-inr .left, .review-inr .right {
+	    width: 100%;
+	    float: none;
+	}
+	.review-inr .right,.conact-wrp .right{
+		margin-top: 50px;
+	}
+	.conact-wrp .left,.conact-wrp .right{
+		float: none;
+		width: 100%;
+		position: unset;
+		transform: translateY(0);
+	}
+	.review-inr .section-title {
+	    padding: 0 22% 0 0;
+	}
+	.client-name h4 {
+	    font-size: 24px;
+	    line-height: 30px;
+	}
+	.conact-wrp .section-title {
+	    padding: 0 42% 0 0;
+	}
+	.feild50 {
+	    margin-left: 24.9px !important;
+	}
+	.map-location {
+		margin: 10px 0 30px;
+	}
+	figure.canada {
+	    top: 39%;
+	    left: 8%;
+	}
+	figure.india {
+	    right: 24.5%;
+	    top: 57.5%;
+	}
+	figure.australia {
+	    bottom: -3%;
+	    right: 10%;
+	}
+	.map-location figcaption svg {
+	    height: 76px;
+	    width: 76px;
+	}
+	p {
+	    font-size: 17px;
+	    line-height: 28px;
+	}
+	figure.canada img, figure.australia img {
+	    height: 84px;
+	    width: 84px;
+	}
+	figcaption {
+	    width: 265px;
+	    padding: 15px 20px;
+	}
+	.australia figcaption {
+	    top: -69%;
+	    left: -307%;
+	}
+	.india figcaption {
+	    top: -40%;
+	    left: -320%;
+	}
+	.canada figcaption{
+		top: 80%;
+	} 
+	.connect-row {
+	    width: 100%;
+	}
+	.connect-box h4 {
+	    margin: 22px 0 0;
+	    font-size: 22px !important;
+	}
+	.connect-box{
+		padding: 40px 10px;
+		margin-left: 5.8%;
+	}
+	.connect-icon {
+	    height: 65px;
+	    width: 70px;
+	    border-radius: 10px;
+    }
+
+    .footer-contact {
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        text-align: left;
+    }
+    .contact-detl-box {
+        width: auto !important;
+        margin: 10px !important;
+    }
+    .footer-bottom {
+        padding: 30px 0 20px;
+    }
+    .footer-bottom .left,.footer-bottom .right{
+    	text-align: center;
+    	float: none;
+    	width: 100%;
+    }
+    .footer-bottom .left{
+    	margin-bottom: 20px;
+    }
+    .footer-middle {
+        padding: 30px 0 40px;
+    }
+    .footer-contact{
+    	margin: 38px auto 0;
+    }
+    .footer-logo {
+        padding: 4px 40px;
+        border-radius: 32px;
+	}
+
+
+/*768*/
+
+@media screen and (max-width: 767px){
+	.common-btn {
+	    padding: 15px 39px;
+	    font-size: 17px;
+	}
+	.banner-inr .left h1 {
+	    font-size: 45px;
+	    line-height: 50px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 63px;
+	    line-height: 70px;
+	}
+	.banner-inr .left p {
+	    margin: 20px 0;
+	}
+	.banner-img{
+		display: block;
+		margin: 0 auto;
+	}
+	.banner-inr .right svg{
+	    display: none;
+	}
+	.section-title {
+	    font-size: 33px;
+	    line-height: 45px;
+	}
+	.bestwrks {
+	    width: 46%;
+	    margin: 0 1.5% 7% 1.5%!important;
+	}
+	.apps-wrp-left img, .apps-wrp-left figure, .apps-wrp-right img, .apps-wrp-right figure {
+	    display: inline-block;
+	    margin:  10px;
+	}
+	.easy-wrp:before {
+	    height: 650px;
+	}
+	.review-inr .section-title {
+	    padding: 0 12% 0 0;
+	}
+	.feild50 {
+	    margin-left: 20.42px !important;
+	}
+	.conact-wrp form p {
+	    margin: 27px 0 0;
+	}
+	figure.india {
+	    right: 23.5%;
+	    top: 57.5%;
+	}
+	.connect-box {
+	    padding: 30px 10px;
+	    margin-left: 5.7%;
+	}
+	.contact-detl-box span {
+		font-size: 18px;
+	}
+	.indvdl-service{
+		width: 46%;
+	}
+}
+/*650*/
+
+@media screen and (max-width: 649px){
+	.site-menu {
+	    width: 49%;
+	}
+	.banner-inr .left h1 {
+	    font-size: 40px;
+	    line-height: 45px;
+	}
+	.client-name h4 {
+	    font-size: 22px;
+	    line-height: 25px;
+	}
+	.client-name p {
+	    font-size: 15px;
+	    line-height: 24px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 55px;
+	    line-height: 64px;
+	}
+	.service-inr h3 {
+	    font-size: 35px;
+	    line-height: 36px;
+	}
+	.servc-icon svg {
+	    height: 100px;
+	    width: 100px;
+	}
+	.indvdl-service .servc-icon:before, .indvdl-service .servc-icon:before {
+	    height: 57%;
+	    width: 57%;
+	}
+	.indvdl-service h4 {
+	    font-size: 22px;
+	    line-height: 28px;
+	    margin: 0px 0 18px;
+	}
+	.indvdl-service{
+		width: 300px !important;
+		margin:5px 20px !important;
+	}
+	.service-wrp {
+	    padding: 70px 0 140px;
+	}
+	.indvdl-service p {
+	    font-size: 16px;
+	    line-height: 27px;
+	    padding: 0 10px;
+	}
+	.section-title {
+	    font-size: 28px;
+	    line-height: 40px;
+	}
+	.achvmnt-inr h5 {
+	    font-size: 22px;
+	    line-height: 27px;
+	    margin: 17px 0 15px;
+	}
+	.desktop-circle{
+		display: none;
+	}
+	.responsive-circle{
+		display: block;
+	}
+	.c-circlet_item{
+		height: 140px;
+		width: 140px;
+		border-radius: 50%;
+		position: unset;
+		display: inline-block;
+		margin: 20px;
+		vertical-align: top;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1)
+	}
+	.achvmnt-inr .right {
+		padding: 20px 0;
+	}
+	.portfolio-wrp {
+	    padding: 15px 0 0px;
+	}
+	.bestwrks{
+		width: 360px !important;
+		margin:5px 20px !important;
+		border: 3px solid #233D63;
+	    padding: 20px;
+	}
+	.bestwrks h4 {
+	    font-size: 22px;
+	    line-height: 26px;
+	}
+	.easy-wrp:before{
+		top: 0;
+	}
+	.easy-wrp {
+	    padding: 100px 0 70px;
+	}
+	.apps-wrp-left img, .apps-wrp-left figure, .apps-wrp-right img, .apps-wrp-right figure{
+		margin:20px  2px;
+	}
+	.review-inr .section-title {
+	    padding: 0px 8% 0 0;
+	}
+	.section-title-sml {
+	    font-size: 18px;
+	    line-height: 23px;
+	    margin-bottom: 11px;
+	}
+	.section-title {
+	    font-size: 26px;
+	    line-height: 37px;
+	}
+	.common-btn {
+	    padding: 13px 35px;
+	    font-size: 16px;
+	}
+	.feild50{
+		width: 100%;
+		margin-left: 0 !important;
+	}
+	figure.india img {
+	    margin: 0 auto;
+	    width: 70%;
+	}
+	figure.canada img, figure.australia img {
+	    height: 64px;
+	    width: 64px;
+	}
+	.connect-row{
+		text-align: center;
+	}
+	.connect-box{
+		width:55%;
+		margin: 0 0 30px !important;
+	}
+	.footer-top:before{
+		height: 90%;
+		width:1%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	.portfolio-wrp {
+	    padding: 65px 0 0px;
+	}
+	.conact-wrp .section-title {
+	    padding: 0 8% 0 0;
+	}
+	.map-location{
+		display: none;
+	}
+	.addresses{
+		display: block;
+		width: auto !important;
+		padding: 15px 10px;
+	}
+	.responsive-address{
+		padding: 60px 0;
+	}
+}
+/*480*/
+
+@media screen and (max-width: 479px){
+	.service-wrp:before,.easy-wrp:before{
+		display: none;
+	}
+	.portfolio-wrp .bx-viewport{
+		width: 392px !important;
+	}
+	.bestwrks {
+	    width: 345px !important;
+	}
+	.banner-inr .left p {
+	    padding: 0px 5px 0 0;
+	}
+	.achvmnt-inr p {
+	    line-height: 30px;
+	    padding: 0 10px 0 0;
+	}
+	.review-inr .section-title {
+	    padding: 0px 0 0 0;
+	}
+	.connect-box {
+	    width: 65%;
+	}
+	.footer-logo {
+	    padding: 0px 20px;
+	    border-radius: 32px;
+	}
+	
+}
+/*414*/
+
+@media screen and (max-width: 413px){
+	.site-logo, .site-logo img {
+	    width: 162.4px;
+	    height: 89.71px;
+	}
+	.banner-inr .left h1 {
+	    font-size: 36px;
+	    line-height: 39px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 50px;
+	    line-height: 57px;
+	}
+	.bestwrks {
+	    width: 340.5px !important;
+	}
+	.portfolio-wrp .bx-viewport {
+	    height: 407px !important;
+	}
+	.apps-wrp-left img, .apps-wrp-left figure, .apps-wrp-right img, .apps-wrp-right figure {
+	    margin: 11px -1px;
+	}
+	.easy-wrp {
+	    padding: 60px 0 50px;
+	}
+	.section-title {
+	    font-size: 28px;
+	    line-height: 38px;
+	}
+	.service-inr h3 {
+	    font-size: 32px;
+	    line-height: 36px;
+	}
+	.service-row {
+	    padding: 20px 0;
+	}
+	.achvmnt-inr .section-title {
+	    padding: 0 0 0 0;
+	}
+	
+	.c-circlet_item {
+	    height: 130px;
+	    width: 130px;
+	}
+	.portfolio-wrp {
+	    padding: 30px 0 0px;
+	}
+	.best-wrk-row {
+	    padding: 20px 0 0px;
+	}
+	.contact-icon {
+	    height: 54px;
+	    width: 54px;
+	    margin-right: 11px;
+	}
+	.social-links li svg {
+	    height: 18px;
+	    width: 18px;
+	}
+	.social-links li{
+		height: 40px;
+		width: 40px;
+	}
+	.bestwrks {
+	    width: 302px !important;
+	}
+	.portfolio-wrp .bx-viewport {
+	    width: 349px !important;
+	}
+	.client-profile,.client-rating {
+	    width: 100%;
+	    text-align: center;
+	}
+	.client-rating{
+		margin-top: 10px;
+	}
+	.testimonials {
+	    padding: 50px 20px 20px;
+    }
+}
+/*375*/
+
+@media screen and (max-width: 374px){
+	.site-menu {
+	    width: 46%;
+	}
+	.banner-inr .left h1 {
+	    font-size: 34px;
+	    line-height: 36px;
+	}
+	.banner-inr .left h1 span {
+	    font-size: 47px;
+	    line-height: 56px;
+	}
+	.bestwrks {
+	    width: 282px !important;
+	    margin: 5px 12.5px !important;
+	}
+	.portfolio-wrp .bx-viewport {
+	    width: 309px !important;
+	}
+	
+	.apps-wrp-left figure, .apps-wrp-right figure {
+	    margin: 10px;
+	    width: 41%;
+	}
+	.easy-inr p br{
+		display: none;
+	}
+	.c-circlet_item {
+		margin: 10px;
+	}
+	.connect-box {
+	    width: 75%;
+	}
+	.contact-icon {
+	    height: 50px;
+	    width: 50px;
+	    margin-right: 5px;
+	}
+	.footer-contact {
+	    padding: 20px 10px 20px 10px;
+	}
+	.contact-detl-box h5, .contact-detl-box span {
+	    font-size: 16px;
+	}
+	.social-links li
+	{
+		margin-left: 8px !important;
+	}
+	.indvdl-service {
+	    width: 247px !important;
+	    margin: 5px 14px !important;
+	    padding: 20px 9px;
+	}
+	.indvdl-service p {
+	    padding: 0;
+	}
+	.service-inr .bx-viewport {
+	    width: 283px !important;
+	}
+	.footer-bottom .right p {
+	    line-height: 23px;
+	}
+	.footer-logo {
+	    padding: 0px 12px;
+	    border-radius: 35px;
+	}
+}	
+/*320*/
+

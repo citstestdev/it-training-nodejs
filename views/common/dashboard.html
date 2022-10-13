@@ -1,0 +1,106 @@
+<%- include('./sidebar_common.html') %>
+    <!-- Layout container -->
+			<div class="layout-page">
+				<%- include('./header_new.html') %>
+			   <!-- <%= opt._id %> 
+			   <%= users._id %> -->
+				<!-- Content wrapper -->
+				<div class="content-wrapper">
+					<!-- <% if(message != ''){ %>
+						<div class="alert alert-success" role="alert">
+							<%= message %>
+						</div>
+						<% } %> -->
+					<!-- Content -->
+					<div class="container-xxl flex-grow-1 container-p-y">
+						<div class="row">
+							<div class="col-lg-12 mb-4 order-0">
+								<% if(message != ''){ %>
+									<div class="alert alert-success" role="alert">
+										<%= message %>
+									</div>
+									<% } %>
+								<div class="card">
+									<div class="d-flex align-items-end row">
+										<div class="col-sm-7">
+											<div class="card-body">
+												<h5 class="card-title text-primary"  style="text-transform: capitalize;">Congratulations <%= users.username %> 🎉</h5>
+												<div id="main-bar"></div>
+												<p class="mb-4">You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in your profile.</p></div>
+										    </div>
+										<div class="col-sm-5 text-center text-sm-left">
+											<div class="card-body pb-0 px-0 px-md-4"> <img src="./assets/img/man-with-laptop-light.png" height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png"> </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<!-- section 1 -->
+							<div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+								<div class="card h-100">
+									<div class="card-body" style="background-color: rgba(248, 69, 37, 0.1) !important;">
+										<div class="d-flex justify-content-between align-items-center mb-3"  >
+											<div class="d-flex flex-column align-items-center gap-1">
+                                                <h3 class="mb-2">Total Users</h3> 
+												<h5 class="mb-2">6</h5> 
+                                             </div>
+											<div class="resize-triggers">
+												<div class="expand-trigger">
+													<div></div>
+												</div>
+												<div class="contract-trigger"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							    <!--/ section 1  -->
+                            	<!-- section 2  -->
+							<div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+								<div class="card h-100">
+									<div class="card-body" style="background-color: #e8fadf !important;">
+										<div class="d-flex justify-content-between align-items-center mb-3">
+											<div class="d-flex flex-column align-items-center gap-1">
+                                                <h3 class="mb-2">Total Students</h3> 
+												<h5 class="mb-2">100</h5> 
+                                             </div>
+											<div class="resize-triggers">
+												<div class="expand-trigger">
+													<div></div>
+												</div>
+												<div class="contract-trigger"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/  section 2 -->
+                            	<!-- section 3  -->
+							<div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+								<div class="card h-100">
+									<div class="card-body" style="background-color: #d7f5fc !important;">
+										<div class="d-flex justify-content-between align-items-center mb-3" >
+											<div class="d-flex flex-column align-items-center gap-1">
+                                                <h3 class="mb-2">Total Trainer</h3> 
+												<h5 class="mb-2">8</h5> 
+                                             </div>
+											<div class="resize-triggers">
+												<div class="expand-trigger">
+													<div></div>
+												</div>
+												<div class="contract-trigger"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ section  3 -->
+						</div>
+					</div>
+					<!-- / Content -->
+					<%- include('./footer.html') %>
+					<div class="content-backdrop fade"></div>
+				</div>
+				<!-- Content wrapper -->
+			</div>

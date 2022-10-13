@@ -1,0 +1,87 @@
+<%- include('../common/sidebar_common.html') %>
+<div class="layout-page">
+  <%- include('../common/header_new.html') %>
+
+  <div class="content-wrapper">
+    
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <h4 class="fw-bold py-3 mb-4">
+        <% if(msg) { %> <div  class="alert alert-success" id="alertmsg" ><span class="cmn-message"><%= msg %></span></div><% } %>
+      </h4>
+     <!-- Start 1 section for items  -->
+     <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4" >
+          <ul class="nav nav-pills flex-column-reverse flex-md-row-reverse mb-3" style="float:right">
+            <!-- <li class="nav-item"><a class="nav-link form-toggle active" id="contentbtn" href="javascript:void(0);">Add Testimonial</a></li>
+            <li class="nav-item"><a class="nav-link form-toggle active" id="contenteditbtn" href="javascript:void(0);"  style="display:none">View</a></li> -->
+          </ul>
+        <div id="contentviewForm">
+          <h5 class="card-header">User List</h5>
+          <hr class="my-0">
+          <div class="card-body">
+            <table id="dataviewtable" class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Image</th>
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <!-- <th>View</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <% i=1; %> 
+                <% for(var item of pagedata) { %>
+                
+                  <tr>
+                    <td> 
+                        <%= i %>
+                    </td>
+                    <td> 
+                        <img <% if(item.imagemiddile){  %> src="/uploadimg/400x250/<%= item.imagemiddile %>"  <%}else{  %> src="/images/user.png"  <% } %>   style="width:70px; height:70px;"  class="h-auto rounded-circle"/>  
+                    </td>
+                    <td> 
+                        <%= item.username %>
+                    </td>
+                    <td> 
+                        <%= item.email %>
+                    </td>
+                    <!-- <td> 
+                        <a href="/profile"><i class="menu-icon tf-icons bx bx-pencil"></i></a>
+                    </td>
+    -->
+                    </tr>
+  
+                <%  i++;} %>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+       
+       
+    </div>
+      </div>
+    </div>
+    <!-- end 1 section for items  -->
+
+    </div>
+
+		<%- include('../common/footer.html') %>
+    <div class="content-backdrop fade"></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script>
+  
+  $('#dataviewtable').dataTable( {
+    pageLength: 5,
+    lengthMenu: [[5, 10, 20, -1], [5, 10, 20, "All"]]
+  });
+
+  </script>
+
+

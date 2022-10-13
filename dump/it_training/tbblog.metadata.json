@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"it_training.tbblog"},{"v":{"$numberInt":"2"},"unique":true,"key":{"heading":{"$numberInt":"-1"}},"name":"heading","ns":"it_training.tbblog","background":false}],"uuid":"fd3cec08ae0648fc969198b4db9c8dc7"}

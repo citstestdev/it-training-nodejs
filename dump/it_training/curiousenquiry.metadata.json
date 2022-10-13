@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"it_training.curiousenquiry"}],"uuid":"f8bb9e93ae3f4e2b8f42aeb504547dc5"}

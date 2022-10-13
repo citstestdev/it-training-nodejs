@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"it_training.achievement"}],"uuid":"b529b00b77ca4291bfdfef5489ec209f"}

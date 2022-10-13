@@ -1,0 +1,323 @@
+<%- include('../common/sidebar_common.html') %>
+<div class="layout-page">
+  <%- include('../common/header_new.html') %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <div class="content-wrapper">
+    
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <h4 class="fw-bold py-3 mb-4">
+        <% if(msg) { %> <div  class="alert alert-success" id="alertmsg" ><span class="cmn-message"><%= msg %></span></div><% } %>
+      </h4>
+     <!-- Start 1 section for items  -->
+     <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4" >
+          <ul class="nav nav-pills flex-column-reverse flex-md-row-reverse mb-3" style="float:right">
+            <li class="nav-item"><a class="nav-link form-toggle active" id="contentbtn" href="javascript:void(0);">Edit</a></li>
+            <li class="nav-item"><a class="nav-link form-toggle active" id="contenteditbtn" href="javascript:void(0);"  style="display:none">View</a></li>
+          </ul>
+        <div id="contentmainForm">
+          <h5 class="card-header"></h5>
+          <hr class="my-0">
+          <div class="card-body">
+            <h3><% if(pagedata) { %><%= pagedata.heading %><% } %></h3>
+            <br>
+            <p><% if(pagedata) { %><%= pagedata.description.replace(/<[^>]*>?/gm, '') %><% } %> </p>
+            <br>
+            <h5><% if(pagedata) { %><%= pagedata.btnheading %><% } %></h5>
+          </div>
+        </div>
+       
+        <div id="editForm"  style="display:none">
+          <h5 class="card-header">Edit</h5>
+          <hr class="my-0">
+          <div class="card-body">
+            <form method="POST" action="/course" enctype="multipart/form-data">
+              <div class="row">
+                <div class="mb-3 col-md-10">
+                  <label class="form-label">Heading :</label>
+                  <input type="text" name="heading" class="form-control" <% if (pagedata) { %>value="<%= pagedata.heading %>" <% } %>  required> </div>
+                <div class="mb-3 col-md-10">
+                  <label class="form-label">Description :</label>
+                  <textarea id="editor1" name="description" class="form-control"  required><% if (pagedata) { %><%= pagedata.description %> <% } %></textarea> 
+                </div>
+                <div class="mb-3 col-md-10">
+                  <labe class="form-label">Btn Heading :</label>
+                  <input type="text" name="btnheading" class="form-control" <% if (pagedata) { %>value="<%= pagedata.btnheading %>" <% } %> required> </div>
+                  <div class="mb-3 col-md-10">
+                    <labe class="form-label">Images :</label>
+                  <input type="hidden" name="oldimage" <% if (pagedata) { %>value="<%= pagedata.banner %>" <% } %>>    
+                  <input type="file" name="banner" class="form-control" onchange="readURL(this);"  style="border:none;width:100%;" accept="image/*">
+                  <img id="clientimageupdate" <% if(pagedata.banner != ''){  %> src="uploads/<%= pagedata.banner %>"  <%}else{  %> src="/images/user.png"  <% } %> alt="your image" width="100px" height="100px"/> 
+                </div>
+                </div>
+              <div class="mt-2">
+                <button type="submit" class="btn btn-primary me-2">Update</button>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- end 1 section for items  -->
+   
+
+    <!-- Start 2 section for items  -->
+ <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-4" >
+        <ul class="nav nav-pills flex-column-reverse flex-md-row-reverse mb-3" style="float:right">
+          <li class="nav-item"><a class="nav-link form-toggle active"  id="contentitembtn" href="javascript:void(0);">Add</a></li>
+          <li class="nav-item"><a class="nav-link form-toggle active" id="contentitemeditbtn" href="javascript:void(0);"  style="display:none">View</a></li>
+        </ul>
+      <div id="contentlistform">
+        <h5 class="card-header"></h5>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Designation</th>
+                <th>Heading</th>
+                <th>Duration</th>
+                <th>Edit</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var item of records) { %>
+              
+                <tr><td> 
+                  <%= item.designation.replace(/<[^>]*>?/gm, '') %>
+                  </td>
+                  <td> 
+                  <%= item.heading %>
+                  </td>
+                  <td> 
+                    <%= item.duration %>
+                  </td>
+                   <td> 
+                  <a href="javascript:void(0)"  onclick="geteditform('<%= item._id %>')">Edit</a>
+                  </td> 
+                  <td> 
+                  <a href="/courseitemdel/<%= item._id %>" onclick="return confirm('Are you sure you want to delete this item')">X</a>
+                  </td>
+                  </tr>
+
+              <% } %>
+             
+            </tbody>
+          </table>
+          <% if (pages > 0) { %>
+            <ul class="pagination text-center">
+                <% if (current == 1) { %>
+                    <li class="disabled"><a>First</a></li>
+                <% } else { %>
+                    <li><a href="/view-all/1">First</a></li>
+                <% } %>
+                <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                <% if (i !== 1) { %>
+                    <li class="disabled"><a>...</a></li>
+                <% } %>
+                <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                    <% if (i == current) { %>
+                        <li class="active"><a><%= i %></a></li>
+                    <% } else { %>
+                        <li><a href="/view-all/<%= i %>"><%= i %></a></li>
+                    <% } %>
+                    <% if (i == Number(current) + 4 && i < pages) { %>
+                        <li class="disabled"><a>...</a></li>
+                    <% } %>
+                <% } %>
+                <% if (current == pages) { %>
+                    <li class="disabled"><a>Last</a></li>
+                <% } else { %>
+                    <li><a href="/view-all/<%= pages %>">Last</a></li>
+                <% } %>
+            </ul>
+        <% } %>
+        </div>
+      </div>
+     
+      <div id="contentlistadd"  style="display:none">
+        <h5 class="card-header">Add</h5>
+        <hr class="my-0">
+        <div class="card-body">
+          <form method="POST" action="/addcourse" enctype="multipart/form-data">
+            <div class="row">
+              <div class="mb-3 col-md-10">
+                <input type="hidden" name="item" class="form-control" value="item" required> 
+            </div>
+              <div class="mb-3 col-md-10">
+                <label class="form-label">Heading :</label>
+                <input type="text" name="heading" class="form-control"  required> 
+            </div>
+            <!-- <div class="mb-3 col-md-10">
+                <labe class="form-label">Designation :</label>
+                <input type="text" name="designation" class="form-control"  required> 
+            </div> -->
+            <div class="mb-3 col-md-10">
+              <label class="form-label">Category :</label>
+              <select name="designation" class="form-control" required>
+                  <option value="">Select Category</option>
+                  <% for(var item of allcategory) { %>
+                      <option value="<%= item.categoryname %>"><%= item.categoryname %></option>
+                  <% } %>
+              </select>
+            </div>
+              <div class="mb-3 col-md-10">
+                <label class="form-label">Description :</label>
+                <textarea id="editor1" name="description" class="form-control"  required></textarea> 
+              </div>
+              <div class="mb-3 col-md-10">
+                <label class="form-label">Course Duration :</label>
+                <input type="text" name="duration" class="form-control" required> 
+              </div>
+              <div class="mb-3 col-md-10">
+                <labe class="form-label">upload:</label>
+                <input type="file" name="userPhoto" class="form-control" onchange="readURL(this);"  style="border:none;width:100%;" accept="image/*"> 
+                <img id="itemimage" src="/images/user.png" alt="your image" width="100px" height="100px"/> 
+              </div>
+           
+              </div>
+            <div class="mt-2">
+              <button type="submit" class="btn btn-primary me-2">Add</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+      
+
+
+      <div id="contentlistedit"  style="display:none">
+        <h5 class="card-header">Edit</h5>
+        <hr class="my-0">
+        <div class="card-body">
+          <form method="POST" action="/courseitemupdate" enctype="multipart/form-data">
+            <div class="row">
+              <div class="mb-3 col-md-10">
+                <input type="hidden" class="form-control" name="editid" id="editid"/>
+                <input type="hidden" name="item" id="item" class="form-control" required> 
+            </div>
+              <div class="mb-3 col-md-10">
+                <label class="form-label">Heading :</label>
+                <input type="text" name="heading" id="heading" class="form-control"  required> 
+            </div>
+            <div class="mb-3 col-md-10">
+                <labe class="form-label">Designation :</label>
+                <input type="text" name="designation" id="designation" class="form-control"  required> 
+            </div>
+              <div class="mb-3 col-md-10">
+                <label class="form-label">Description :</label>
+                <textarea  name="description" id="description" class="form-control"  required></textarea> 
+              </div>
+              <div class="mb-3 col-md-10">
+                <label class="form-label">Course Duration :</label>
+                <input type="text" name="duration" id="duration" class="form-control" required> 
+              </div>
+              <div class="mb-3 col-md-10">
+                <labe class="form-label">upload:</label>
+                <input type="hidden" name="preimage" id="preimage">    
+                <input type="file" name="userPhoto" class="form-control" onchange="readURL(this);"  style="border:none;width:100%;" accept="image/*"> 
+                <img id="edititemimage" src="/images/user.png" alt="your image" width="100px" height="100px"/> 
+              </div>
+           
+              </div>
+            <div class="mt-2">
+              <button type="submit" class="btn btn-primary me-2">Update</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- end 2 section for items  -->
+
+    </div>
+
+		<%- include('../common/footer.html') %>
+    <div class="content-backdrop fade"></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  $('#contentlistform').show();
+  $('#contentitembtn').show();
+  $("#contentlistadd").hide();
+  $('#contentitemeditbtn').hide();
+  $("#contentlistedit").hide();
+
+  $('#contentitembtn').click(function(){
+    $('#contentitemeditbtn').show();
+    $('#contentlistform').hide();
+    $('#contentitembtn').hide();
+    $('#contentlistadd').show();
+    $('#contentlistedit').hide();
+  });
+
+  $('#contentitemeditbtn').click(function(){
+    $('#contentitemeditbtn').hide();
+    $('#contentlistform').show();
+    $('#contentitembtn').show();
+    $('#contentlistadd').hide();
+    $('#contentlistedit').hide();
+  });
+
+  function geteditform(editid){
+  // alert(editid);
+    $.ajax({
+    url:"/getparticulerdatabyid/"+editid,
+    method:"GET",
+    success: function(response){
+      // alert(response.heading);
+
+      $('#contentlistedit').show();
+      $('#contentlistadd').hide();
+      $('#contentlistform').hide();
+        $('#editid').val(editid);
+        $('#item').val(response.type);
+        $('#heading').val(response.heading);
+        $('#designation').val(response.designation);
+        $('#description').html(response.description);
+        $('#duration').val(response.duration);
+        $('#preimage').val(response.image);
+        if(response.image != ''){
+        $('#edititemimage').attr('src', 'uploads/'+response.image).width(100).height(100); 
+        }else{
+        $('#edititemimage').attr('src', '/images/user.png').width(100).height(100); 
+        }
+      
+      }
+    });
+    return false;
+ }
+
+
+
+  CKEDITOR.replace('editor-content');
+   
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    //  alert("ftype");
+    reader.onload = function (e) {
+      
+      $('#clientimageupdate').attr('src', e.target.result).width(100).height(100);
+      $('#itemimage').attr('src', e.target.result).width(100).height(100);
+      $('#edititemimage').attr('src', e.target.result).width(100).height(100);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+</script>

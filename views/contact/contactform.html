@@ -1,0 +1,140 @@
+<%- include('../common/sidebar_common.html') %>
+<div class="layout-page">
+  <%- include('../common/header_new.html') %>
+
+  <div class="content-wrapper">
+    
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <h4 class="fw-bold py-3 mb-4">
+        <% if(message != ''){ %>
+          <div class="alert alert-success" role="alert">
+              <%= message %>
+          </div>
+          <% } %>
+      </h4>
+     <!-- Start 1 section for items  -->
+     <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4" >
+          <ul class="nav nav-pills flex-column-reverse flex-md-row-reverse mb-3" style="float:right">
+            <li class="nav-item"><a class="nav-link form-toggle active" id="contentbtn" href="javascript:void(0);">Edit</a></li>
+            <li class="nav-item"><a class="nav-link form-toggle active" id="contenteditbtn" href="javascript:void(0);"  style="display:none">View</a></li>
+          </ul>
+        <div id="contentmainForm">
+          <h5 class="card-header"></h5>
+          <hr class="my-0">
+          <div class="card-body">
+            <h3>  <label>Page Title :&nbsp;</label><% if(pagedata) { %><%= pagedata.pagetitle %><% } %></h3>
+            <br>
+            <h3><% if(pagedata) { %><%= pagedata.heading %><% } %></h3>
+            <br>
+            <p><% if(pagedata) { %><%= pagedata.description.replace(/<[^>]*>?/gm, '') %><% } %> </p>
+            <br>
+            <p><% if(pagedata) { %><%= pagedata.formheading %><% } %> </p>
+            <br>
+            <p><% if(pagedata) { %><%= pagedata.formdescription %><% } %> </p>
+            <br>
+            <p><% if(pagedata) { %><%= pagedata.officetime %><% } %> </p>
+            <br>
+          </div>
+        </div>
+       
+        <div id="editForm"  style="display:none">
+          <h5 class="card-header">Edit</h5>
+          <hr class="my-0">
+          <div class="card-body">
+            <form method="POST" action="/createcontact" >
+              <div class="row">
+                <div class="mb-3 col-md-10">
+                  <label class="form-label">Page Title :</label>
+                  <input type="text" name="pagetitle" class="form-control" <% if (pagedata) { %>value="<%= pagedata.pagetitle %>" <% } %>  required> 
+                </div>
+                <div class="mb-3 col-md-10">
+                  <label class="form-label">Heading :</label>
+                  <input type="text" name="heading" class="form-control" <% if (pagedata) { %>value="<%= pagedata.heading %>" <% } %>  required> </div>
+                <div class="mb-3 col-md-10">
+                  <label class="form-label">Description :</label>
+                  <textarea id="editor1" name="description" class="form-control"  required><% if (pagedata) { %><%= pagedata.description %> <% } %></textarea> 
+                </div>
+
+                <div class="mb-3 col-md-10">
+                    <label class="form-label">Form Heading :</label>
+                    <input type="text" name="formheading" class="form-control" <% if (pagedata) { %>value="<%= pagedata.formheading %>" <% } %>  required> </div>
+                  <div class="mb-3 col-md-10">
+                    <label class="form-label">Form Description :</label>
+                    <textarea id="editor1" name="formdescription" class="form-control"  required><% if (pagedata) { %><%= pagedata.formdescription %> <% } %></textarea> 
+                  </div>
+
+
+                <div class="mb-3 col-md-10">
+                    <label class="form-label">Map Data :</label>
+                    <input type="text" name="mapdata" class="form-control" <% if (pagedata) { %>value="<%= pagedata.mapdata %>" <% } %>  required> 
+                </div>
+
+                <div class="mb-3 col-md-10">
+                    <label class="form-label">Office Timing :</label>
+                    <input type="text" name="officetime" class="form-control" <% if (pagedata) { %>value="<%= pagedata.officetime %>" <% } %>  required> 
+                </div>
+        
+                </div>
+              <div class="mt-2">
+                <button type="submit" class="btn btn-primary me-2">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- end 1 section for items  -->
+   
+
+    <!-- Start 2 section for items  -->
+
+  <!-- end 2 section for items  -->
+
+    </div>
+
+		<%- include('../common/footer.html') %>
+    <div class="content-backdrop fade"></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  $('#contentlistform').show();
+  $('#contentitembtn').show();
+  $("#contentlistadd").hide();
+  $('#contentitemeditbtn').hide();
+//   $("#itemeditform").hide();
+
+  $('#contentitembtn').click(function(){
+    $('#contentitemeditbtn').show();
+    $('#contentlistform').hide();
+    $('#contentitembtn').hide();
+    $('#contentlistadd').show();
+    // $('#edititemform').hide();
+  });
+
+  $('#contentitemeditbtn').click(function(){
+    $('#contentitemeditbtn').hide();
+    $('#contentlistform').show();
+    $('#contentitembtn').show();
+    $('#contentlistadd').hide();
+  });
+
+  CKEDITOR.replace('editor-content');
+   
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+      
+      $('#clientimageupdate').attr('src', e.target.result).width(100).height(100);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+</script>

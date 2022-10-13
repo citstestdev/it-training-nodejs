@@ -1,0 +1,215 @@
+<%- include('./sidebar_common.html') %>
+<div class="layout-page">
+<%- include('./header_new.html') %>
+
+<div class="content-wrapper">
+<div class="container-xxl flex-grow-1 container-p-y">
+<h4 class="fw-bold py-3 mb-4">
+    
+    <% if(message != ''){ %>
+        <div class="alert alert-success" role="alert">
+            <%= message %>
+        </div>
+        <% } %>
+</h4>
+<!-- Section 1 start -->
+
+<div class="row">
+<div class="col-md-12">
+    <div class="card mb-4 ">
+        <hr class="my-0">
+        <div class="card-body">
+            <h1>General Setting</h1>
+            <form method="POST" action="/setting" enctype="multipart/form-data"> 
+                <div class="row">
+
+                    <div class="mb-3 col-md-10">
+                        <label for="firstName" class="form-label">Name :</label>
+                        <input type="text" name="sitename" class="form-control" <%
+                        if(opt.sitename) { %> value="<%= opt.sitename %>"
+                        <% } %> required>
+                    </div>
+                    <div class="mb-3 col-md-10">
+                       
+                      <img src="uploads/<%= opt.image %>"
+                        style="width:155px;height: 100px;" />
+                        
+                        <input type="hidden" name="oldimage" <% if(opt.image) { %>
+                        value="<%= opt.image %>"<% } %> >
+                        <input type="file" name="userPhoto" style="border:none;width:100%;">
+                                            
+                    </div>
+                    <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Description :</label>
+                        <textarea class="form-control" name="description"><% if(opt.description) {%><%= opt.description %><%} %></textarea>
+                      </div>
+                      <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Header google analytics :</label>
+                        <textarea name="header_analytics" class="form-control" ><% if(opt.header_analytics) {%><%= opt.header_analytics %><%} %></textarea>
+                      </div>
+                      <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Footer google analytics :</label>
+                        <textarea name="footer_analytics" class="form-control" ><% if(opt.footer_analytics) {%><%= opt.footer_analytics %><%} %></textarea>
+                      </div>
+
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Update</button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- Section 1 start -->
+<!-- Section 2 start -->
+<div class="row">
+<div class="col-md-12">
+    <div class="card mb-4 ">
+        <hr class="my-0">
+        <div class="card-body">
+            <h1>Header</h1>
+
+
+            <div class="row">
+                <form method="POST" action="/header">
+                    <div class="mb-3 col-md-10">
+                        <label for="lastName" class="form-label">Email :</label>
+                        <input type="text" name="clientemail" class="form-control" <%
+                        if(opt.clientemail) { %> value="<%= opt.clientemail %>"
+                        <% } %>   >
+                    </div>
+
+                    <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Phone :</label>
+                        <input type="text" name="phone" class="form-control"  <%
+                        if(opt.phone) { %> value="<%= opt.phone %>"
+                        <% } %> >
+                    </div>
+
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Update</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- Section 2 end -->
+<!-- Section 3 start -->
+<div class="row">
+    <form method="POST" action="/footer">
+<div class="col-md-12">
+    <div class="card mb-4 ">
+        <hr class="my-0">
+        <div class="card-body">
+            <h1>Footer</h1>
+
+            <div class="row">
+                <h3>Footer Chat</h3>
+      
+                    <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Query chat :</label>
+                        <input type="text" name="query"   class="form-control" <% if(opt.query) { %> value="<%= opt.query %>" <% } %> >
+                      </div>
+                      <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Button :</label>
+                        <input type="text" name="button"   class="form-control" <% if(opt.button) { %> value="<%= opt.button %>" <% } %> >
+                      </div>
+                    <div class="mt-2">
+                   
+                    </div>
+             
+            </div>
+
+<br>
+<hr>
+<br>
+
+        <div class="row">
+            <h3>Footer Contact</h3>
+        
+                <div class="mb-3 col-md-10">
+                    <label for="lastName" class="form-label">Alternate Email :</label>
+                    <input type="text" name="alternateemail"  class="form-control" <% if(opt.alternateemail) { %> value="<%= opt.alternateemail %>" <% } %> >
+                </div>
+            
+                <div class="mb-3 col-md-10">
+                    <label for="email" class="form-label">Alternate Phone :</label>
+                    <input type="text" name="alternatephone"   class="form-control" <% if(opt.alternatephone) { %> value="<%= opt.alternatephone %>" <% } %> >
+                </div>
+                <div class="mt-2">
+      
+                </div>
+          
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+
+
+
+            <div class="row">
+                <h3>Footer Address</h3>
+  
+                    <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Address :</label>
+                        <textarea class="form-control" name="address"><% if(opt.address) {%><%= opt.address %><%} %></textarea>
+                      </div>
+                      <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Address 1:</label>
+                        <textarea class="form-control" name="address_1"><% if(opt.address_1) {%><%= opt.address_1 %><%} %></textarea>
+                      </div>
+                      <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Address 2:</label>
+                        <textarea class="form-control" name="address_2"><% if(opt.address_2) {%><%= opt.address_2 %><%} %></textarea>
+                      </div>
+                    <div class="mt-2">
+                
+                    </div>
+               
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <div class="row">
+                <h3>Footer Copy Right</h3>
+        
+                    <div class="mb-3 col-md-10">
+                        <label for="email" class="form-label">Footer :</label>
+                        <input type="text" class="form-control" name="footer" <% if(opt.footer) { %> value="<%= opt.footer %>" <% } %> >
+                      </div>
+                    <div class="mt-2">
+                       
+                    </div>
+          
+            </div> 
+
+            <button type="submit" class="btn btn-primary me-2">Update</button>
+        </form>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<!-- Section 3 end -->
+</div>
+
+
+<!-- / Content -->
+<%- include('./footer.html') %>
+<div class="content-backdrop fade"></div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

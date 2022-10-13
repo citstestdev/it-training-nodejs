@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"it_training.menus"},{"v":{"$numberInt":"2"},"unique":true,"key":{"indexnumber":{"$numberInt":"1"}},"name":"indexnumber_1","ns":"it_training.menus","background":true}],"uuid":"342a2a9986f74fe695f6848eee9850ea"}
