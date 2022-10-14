@@ -12,6 +12,7 @@ var expressLayout = require("express-ejs-layouts");
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
+var checkLogin = require("./middleware/check");
 
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/it_training";
@@ -187,3 +188,21 @@ app.get("/social-show", async function (req, res, next) {
       });
   });
 });
+
+// app.get("/social-show", async function (req, res, next) {
+//   console.log(req.headers.token);
+//   if (req.headers.token === "true" || checkLogin) {
+//     await MongoClient.connect(url, function (err, db) {
+//       if (err) throw err;
+//       var dbo = db.db("it_training");
+//       dbo
+//         .collection("socials")
+//         .find()
+//         .toArray(function (err, result) {
+//           res.status(200).json(result);
+//         });
+//     });
+//   } else {
+//     res.status(400).json({ message: "Api not response" });
+//   }
+// });
